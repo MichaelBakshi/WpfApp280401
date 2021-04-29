@@ -7,6 +7,8 @@
         mc:Ignorable="d"
         Title="SecondWindow" Height="450" Width="800">
     <Grid>
-        
+        <TextBlock Text="{Binding ElementName=WidthTxtBlock, Path=Text}">
+            
+        </TextBlock>
     </Grid>
 </Window>
