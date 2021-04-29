@@ -10,26 +10,18 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace WpfApp280401
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for SecondWindow.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class SecondWindow : Window
     {
-        public MainWindow()
+        public SecondWindow()
         {
             InitializeComponent();
-        }
-
-        private void Open_Window(object sender, RoutedEventArgs e)
-        {
-            SecondWindow objsecondwindow = new SecondWindow();
-            this.Visibility = Visibility.Hidden;
-            objsecondwindow.Show();
         }
     }
 }

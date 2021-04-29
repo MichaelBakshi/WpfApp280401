@@ -10,34 +10,38 @@
         <TextBox x:Name="Txtbox" HorizontalAlignment="Left" Height="23" Margin="265,55,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="292">
         </TextBox>
 
-        <Label x:Name="TxtLabel" Content="Text" HorizontalAlignment="Left" Margin="75,55,0,0" VerticalAlignment="Top">
+        <Label x:Name="TxtLabel" Content="Please enter your text here:" HorizontalAlignment="Left" Margin="75,55,0,0" VerticalAlignment="Top">
         </Label>
 
-        <Label x:Name="WidthLabel" Content="Width" HorizontalAlignment="Left" Margin="75,139,0,0" VerticalAlignment="Top">
+        <Label x:Name="WidthLabel" Content="Width:" HorizontalAlignment="Left" Margin="75,139,0,0" VerticalAlignment="Top">
         </Label>
 
-        <Label x:Name="Height" Content="Height" HorizontalAlignment="Left" Margin="75,220,0,0" VerticalAlignment="Top">
+        <Label x:Name="Height" Content="Height:" HorizontalAlignment="Left" Margin="75,220,0,0" VerticalAlignment="Top">
         </Label>
 
-        <StackPanel VerticalAlignment="Center" Margin="10,128,10,277" >
+        <StackPanel VerticalAlignment="Center" Margin="10,125,10,274" >
 
 
-            <Slider x:Name="WidthSlider"  Margin="200,10,100,50" 
-                    TickPlacement="BottomRight" TickFrequency="1" Minimum="50" Maximum="250" Height="26"/>
+            <Slider x:Name="WidthSlider"  Margin="200,10,120,50" 
+                    TickPlacement="BottomRight" TickFrequency="1" Minimum="50" Maximum="250" Height="26" IsSnapToTickEnabled="True"/>
 
 
-            <Slider x:Name="HeightSlider"  Margin="200,10,100,50" 
-                    Minimum="30" Maximum="10" TickPlacement="BottomRight" TickFrequency="1" IsSnapToTickEnabled="True"/>
+            <Slider x:Name="HeightSlider"  Margin="200,10,120,50" 
+                    Minimum="30" Maximum="100" TickPlacement="BottomRight" TickFrequency="1" IsSnapToTickEnabled="True"/>
         </StackPanel>
 
-        <TextBlock x:Name="WidthTxtBlock" HorizontalAlignment="Left" Margin="712,144,0,0" TextWrapping="Wrap" Text="{Binding ElementName=WidthSlider, Path=Value}" VerticalAlignment="Top">
+        <TextBlock x:Name="WidthTxtBlock" HorizontalAlignment="Left" Margin="686,139,0,0" TextWrapping="Wrap" Text="{Binding ElementName=WidthSlider, Path=Value}" VerticalAlignment="Top">
         </TextBlock>
 
-        <TextBlock x:Name="HeightTxtBlock" HorizontalAlignment="Left" Margin="712,220,0,0" TextWrapping="Wrap" Text="{Binding ElementName=HeightSlider, Path=Value}" VerticalAlignment="Top">
+        <TextBlock x:Name="HeightTxtBlock" HorizontalAlignment="Left" Margin="686,220,0,0" TextWrapping="Wrap" Text="{Binding ElementName=HeightSlider, Path=Value}" VerticalAlignment="Top">
         </TextBlock>
+
 
         <Button x:Name="TextButton" Content="{Binding ElementName=Txtbox, Path=Text}" HorizontalAlignment="Left" Margin="354,403,0,0" VerticalAlignment="Top" 
-                Width="{Binding ElementName=WidthTxtBlock, Path=Text}" Height="30"/>
+                Width="{Binding ElementName=WidthTxtBlock, Path=Text}" Height="{Binding ElementName=HeightTxtBlock, Path=Text}" Click="Open_Window"/>
+        
+        <Label x:Name="Wsizelbl"  Content="{Binding ElementName=WidthTxtBlock, Path=Text }" HorizontalAlignment="Left" Margin="720,134,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="Hsizelbl" Content="Label" HorizontalAlignment="Left" Margin="720,215,0,0" VerticalAlignment="Top"/>
 
     </Grid>
 </Window>
