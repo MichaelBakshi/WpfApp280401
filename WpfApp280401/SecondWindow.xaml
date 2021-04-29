@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="SecondWindow" Height="450" Width="800">
     <Grid>
-        <TextBlock x:Name="WidthTxtBlock" HorizontalAlignment="Left" Margin="100,139,0,0" TextWrapping="Wrap" Text="dfdfdfg" VerticalAlignment="Top">
+        <TextBlock x:Name="WidthTxtBlock" HorizontalAlignment="Left" Margin="100,139,0,0" TextWrapping="Wrap" Text="{Binding ElementName=WidthTxtBlock, Path=Text}" VerticalAlignment="Top">
         </TextBlock>
     </Grid>
 </Window>
