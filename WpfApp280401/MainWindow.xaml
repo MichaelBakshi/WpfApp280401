@@ -6,6 +6,12 @@
         xmlns:local="clr-namespace:WpfApp280401"
         mc:Ignorable="d"
         Title="MainWindow" Height="600" Width="800">
+
+    <Window.Resources>
+        <local:ValueConverterOne x:Key="ValueConverterOne"></local:ValueConverterOne>
+        <local:ValueConverterTwo x:Key="ValueConverterTwo"></local:ValueConverterTwo>
+    </Window.Resources>
+    
     <Grid>
         <TextBox x:Name="Txtbox" HorizontalAlignment="Left" Height="23" Margin="265,55,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="292">
         </TextBox>
@@ -27,7 +33,7 @@
 
 
             <Slider x:Name="HeightSlider"  Margin="200,10,120,50" 
-                    Minimum="30" Maximum="100" TickPlacement="BottomRight" TickFrequency="1" IsSnapToTickEnabled="True"/>
+                    Minimum="30" Maximum="130" TickPlacement="BottomRight" TickFrequency="1" IsSnapToTickEnabled="True"/>
         </StackPanel>
 
         <TextBlock x:Name="WidthTxtBlock" HorizontalAlignment="Left" Margin="686,139,0,0" TextWrapping="Wrap" Text="{Binding ElementName=WidthSlider, Path=Value}" VerticalAlignment="Top">
@@ -39,9 +45,9 @@
 
         <Button x:Name="TextButton" Content="{Binding ElementName=Txtbox, Path=Text}" HorizontalAlignment="Left" Margin="354,403,0,0" VerticalAlignment="Top" 
                 Width="{Binding ElementName=WidthTxtBlock, Path=Text}" Height="{Binding ElementName=HeightTxtBlock, Path=Text}" Click="Open_Window"/>
-        
-        <Label x:Name="Wsizelbl"  Content="{Binding ElementName=WidthTxtBlock, Path=Text }" HorizontalAlignment="Left" Margin="720,134,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="Hsizelbl" Content="Label" HorizontalAlignment="Left" Margin="720,215,0,0" VerticalAlignment="Top"/>
+
+        <Label x:Name="Wsizelbl" Content="{Binding ElementName=WidthSlider, Path=Value, Converter={StaticResource ValueConverterOne}}" HorizontalAlignment="Left" Margin="720,134,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="Hsizelbl" Content="{Binding ElementName=HeightSlider, Path=Value, Converter={StaticResource ValueConverterTwo}}" HorizontalAlignment="Left" Margin="720,215,0,0" VerticalAlignment="Top"/>
 
     </Grid>
 </Window>

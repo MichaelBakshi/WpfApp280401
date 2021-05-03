@@ -59,6 +59,7 @@
       <DependentUpon>SecondWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="ValueConverterOne.cs" />
+    <Compile Include="ValueConverterTwo.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>

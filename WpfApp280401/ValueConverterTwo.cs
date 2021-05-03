@@ -3,21 +3,20 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using WpfApp280401;
 using System.Windows.Data;
 
 namespace WpfApp280401
 {
-    public class ValueConverterOne: IValueConverter
+    public class ValueConverterTwo: IValueConverter
     {
 
         public object Convert(object value, Type targetType, object parameter, System.Globalization.CultureInfo culture)
         {
-            if ((double)value >=50 && (double)value<=100)
+            if ((double)value >= 30 && (double)value <= 55)
                 return "Small";
-            else if ((double)value >100  && (double)value <= 150)
+            else if ((double)value > 55 && (double)value <= 80)
                 return "Medium";
-            else if ((double)value > 150 && (double)value <= 200)
+            else if ((double)value > 80 && (double)value <= 105)
                 return "Large";
             else
                 return "Extra Large";
