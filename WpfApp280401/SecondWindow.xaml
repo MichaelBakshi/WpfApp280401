@@ -6,8 +6,15 @@
         xmlns:local="clr-namespace:WpfApp280401"
         mc:Ignorable="d"
         Title="SecondWindow" Height="450" Width="800">
+
     <Grid>
-        <TextBlock x:Name="WidthTxtBlock" HorizontalAlignment="Left" Margin="100,139,0,0" TextWrapping="Wrap" Text="{Binding ElementName=WidthTxtBlock, Path=Text}" VerticalAlignment="Top">
+        <TextBlock x:Name="SecondWindowWidthLabel"  HorizontalAlignment="Left" Margin="150,83,0,0" TextWrapping="Wrap" Text="{Binding WidthChosen }" VerticalAlignment="Top" Height="62" Width="108">
         </TextBlock>
+
+        <TextBlock x:Name="SecondWindowHeightLabel"  HorizontalAlignment="Left" Margin="150,145,0,0" TextWrapping="Wrap" Text="{Binding HeightChosen}" VerticalAlignment="Top" Height="62" Width="108">
+        </TextBlock>
+
+        <TextBlock x:Name="SecondWindowextLabel"  HorizontalAlignment="Left" Margin="150,252,0,0" TextWrapping="Wrap" Text="{Binding TextChosen}" VerticalAlignment="Top" Height="58" RenderTransformOrigin="-0.48,0.027" Width="117"/>
+
     </Grid>
 </Window>

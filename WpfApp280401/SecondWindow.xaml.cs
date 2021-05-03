@@ -19,9 +19,17 @@ namespace WpfApp280401
     /// </summary>
     public partial class SecondWindow : Window
     {
-        public SecondWindow()
+        public double WidthChosen { get; set; }
+        public double HeightChosen { get; set; }
+        public string TextChosen { get; set; }
+        public SecondWindow(double widthChosen, double heightChosen, string textChosen )
         {
             InitializeComponent();
+            
+            WidthChosen = widthChosen;
+            HeightChosen = heightChosen;
+            TextChosen = textChosen;
+            this.DataContext = this;
         }
     }
 }

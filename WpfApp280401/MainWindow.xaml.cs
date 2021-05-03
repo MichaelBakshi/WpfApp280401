@@ -23,11 +23,12 @@ namespace WpfApp280401
         public MainWindow()
         {
             InitializeComponent();
+            this.DataContext = this;
         }
 
         private void Open_Window(object sender, RoutedEventArgs e)
         {
-            SecondWindow objsecondwindow = new SecondWindow();
+            SecondWindow objsecondwindow = new SecondWindow(WidthSlider.Value,HeightSlider.Value,Txtbox.Text);
             this.Visibility = Visibility.Hidden;
             objsecondwindow.Show();
         }
